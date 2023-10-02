@@ -5,12 +5,28 @@ import { ThemeProvider } from "styled-components/native";
 
 import { theme } from "./src/infrastructure/theme";
 ///const isAndroid = Platform.OS === "android";
-
-// const [searchQuery, setSearchQuery] = React.useState("");
-// const onChangeSearch = (query) => setSearchQuery(query);
-
 //console.log('StatusBar.currentHeight', );
+
+import {
+  useFonts as useOswald,
+  Oswald_400Regular,
+} from "@expo-google-fonts/oswald";
+
+import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
+
 export default function App() {
+  const [oswaldLoaded] = useOswald({
+    Oswald_400Regular,
+  });
+
+  const [latoLoaded] = useLato({
+    Lato_400Regular,
+  });
+
+  if (!oswaldLoaded || !latoLoaded) {
+    return null;
+  }
+
   return (
     <>
       <ThemeProvider theme={theme}>
