@@ -1,15 +1,12 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
-import {
-  StyleSheet,
-  SafeAreaView,
-  Text,
-  View,
-  Platform,
-  StatusBar,
-} from "react-native";
+import { StyleSheet, Text, View, Platform, StatusBar } from "react-native";
+import { Searchbar, SafeAreaView } from "react-native-paper";
 
 ///const isAndroid = Platform.OS === "android";
+
+// const [searchQuery, setSearchQuery] = React.useState("");
+// const onChangeSearch = (query) => setSearchQuery(query);
 
 //console.log('StatusBar.currentHeight', );
 export default function App() {
@@ -17,7 +14,7 @@ export default function App() {
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.search}>
-          <Text>search</Text>
+          <Searchbar />
         </View>
         <View style={styles.list}>
           <Text>list</Text>
