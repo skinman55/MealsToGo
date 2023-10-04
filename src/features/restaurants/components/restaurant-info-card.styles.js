@@ -6,8 +6,13 @@ export const Icon = styled.Image`
   height: 15px;
 `;
 
-export const Info = styled.View`
+export const RestaurantCard = styled(Card)`
+  background-color: ${(props) => props.theme.colors.bg.primary};
+`;
+
+export const RestaurantCardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.space[3]};
+  background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 
 export const Address = styled.Text`
@@ -15,14 +20,8 @@ export const Address = styled.Text`
   font-size: ${(props) => props.theme.fontSizes.caption};
 `;
 
-export const RestaurantCard = styled(Card)`
-  background-color: ${(props) => props.theme.colors.bg.primary};
-  margin-bottom: ${(props) => props.theme.space[3]};
-`;
-
-export const RestaurantCardCover = styled(Card.Cover)`
-  padding: ${(props) => props.theme.space[4]};
-  background-color: ${(props) => props.theme.colors.bg.primary};
+export const Info = styled.View`
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 export const Rating = styled.View`
