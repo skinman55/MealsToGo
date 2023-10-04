@@ -12,6 +12,8 @@
   "dependencies": {
     "@expo-google-fonts/lato": "^0.2.3",
     "@expo-google-fonts/oswald": "^0.2.3",
+    "@mdi/js": "^7.2.96",
+    "@mdi/react": "^1.6.1",
     "@react-navigation/bottom-tabs": "^6.5.9",
     "@react-navigation/native": "^6.1.8",
     "@react-navigation/stack": "^6.3.18",
